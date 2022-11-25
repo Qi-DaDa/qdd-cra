@@ -1,6 +1,28 @@
 {
-    "presets": [
+  "presets": [
+    [
       "@babel/preset-env",
+      {
+        // 默认为commonjs， Babel 会在 Rollup之前处理，当babel处理成commonjs后rollup将无法处理
+        "modules": false,
+        "targets": {
+          "browsers": ">5%"
+        }
+      }
+    ],
+    [
       "@babel/preset-react"
     ]
-  }
+  ],
+  // 插件：插件在 Presets 前运行
+  "plugins": [
+    // 解决多个地方使用相同代码导致打包重复的问题
+    // [
+    //   "@babel/plugin-transform-runtime"
+    // ]
+  ],
+  // 是否产生注释：webpack之中使用UglifyJsPlugin插件也是一样的效果
+  "comments": false,
+  // 是否压缩
+  "minified": true
+}

@@ -7,8 +7,11 @@ module.exports = {
     app: './src/index.js',
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './build'),
     filename: '[name].bundle.js',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'], // 隐藏后缀名
   },
   module: {
     rules: [
