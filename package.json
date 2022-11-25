@@ -6,7 +6,7 @@
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack",
     "lint": "eslint --ext .jsx,.js src",
-    "fix": "eslint --fix --ext .jsx,.js src"
+    "fix": "eslint --fix --ext .js,.jsx src"
   },
   "author": "",
   "license": "ISC",

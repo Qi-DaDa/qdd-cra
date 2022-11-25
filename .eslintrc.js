@@ -11,9 +11,9 @@ module.exports = {
   },
   // extends 指定扩展的配置, 支持规则的覆盖和聚合
   extends: [
+    'airbnb',
     'plugin:react/recommended',
     'plugin:prettier/recommended', // 如果同时使用了eslint和prettier发生冲突了，会关闭掉与prettier有冲突的规则，也就是使用prettier认为对的规则
-    'airbnb',
   ],
   // 配置那些我们想要Linting规则的插件
   plugins: [
@@ -27,6 +27,7 @@ module.exports = {
     // react
     'react/react-in-jsx-scope': 0, // 验证 react来源
     'react/prop-types': 0, // 闭react默认的props-type验证
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }], // 可免去后缀
     // prettier
     'prettier/prettier': [
       2,
