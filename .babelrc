@@ -6,13 +6,11 @@
         // 默认为commonjs， Babel 会在 Rollup之前处理，当babel处理成commonjs后rollup将无法处理
         "modules": false,
         "targets": {
-          "browsers": ">5%"
+          "browsers": ">5%" // 指定需要兼容的浏览器类型和版本
         }
       }
     ],
-    [
-      "@babel/preset-react"
-    ]
+    ["@babel/preset-react"]
   ],
   // 插件：插件在 Presets 前运行
   "plugins": [

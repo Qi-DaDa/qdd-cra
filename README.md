@@ -3,33 +3,37 @@
 **dependencies**
 | 依赖 | 说明 |
 | :---------- | :---- |
-| `react`| 基础 |
-| `react-dom`| 基础 |
+| `react`| react 框架安装 |
+| `react-dom`| react-dom 安装 |
 
 **devDependencies**
 
-| 依赖                        | 说明                                                                       |
-| :-------------------------- | :------------------------------------------------------------------------- |
-| `@babel/core`               | --                                                                         |
-| `@babel/preset-env`         | --                                                                         |
-| `@babel/preset-react`       | --                                                                         |
-| `babel-loader`              | --                                                                         |
-| `style-loader`              | --                                                                         |
-| `css-loader`                | --                                                                         |
-| `html-webpack-plugin`       | --                                                                         |
-| `webpack`                   | --                                                                         |
-| `webpack-cli`               | --                                                                         |
-| `webpack-dev-server`        | --                                                                         |
-| `eslint`                    | lint 代码的主要工具，所以的一切都是基于此包                                |
-| `eslint-config-airbnb`      | 提供了所有的 Airbnb 的 ESLint 配置                                         |
-| `eslint-plugin-react`       | （airbnb 内部）React 专用的校验规则插件                                    |
-| `eslint-plugin-import`      | （airbnb 内部）import/export 语法的校验, 并防止文件路径/导入名称错误的情况 |
-| `eslint-plugin-jsx-a11y`    | （airbnb 内部）该依赖包专注于检查 JSX 元素的可访问性                       |
-| `eslint-plugin-react-hooks` | （airbnb 内部）检验 react-hooks 的使用方式                                 |
-| `eslint-config-prettier`    | 将会禁用掉所有那些非必须或者和 prettier 冲突的规则                         |
+| 依赖| 说明|
+| :-------------------------- | :----------------------------- |
+| `@babel/core`         | 用于解析最新 ES 标准|
+| `@babel/preset-env`   | 根据预设的环境自动选用合适 babel 插件 |
+| `@babel/preset-react` | preset-react|
+| `eslint`              | lint 代码的主要工具，所以的一切都是基于此包 |
+| `eslint-config-airbnb`| 提供了所有的 Airbnb 的 ESLint 配置 |
+| `eslint-plugin-react` | （airbnb 内部）React 专用的校验规则插件 |
+| `eslint-plugin-import`| （airbnb 内部）import/export 语法的校验, 并防止文件路径/导入名称错误的情况 |
+| `eslint-plugin-jsx-a11y`    | （airbnb 内部）该依赖包专注于检查 JSX 元素的可访问性 |
+| `eslint-plugin-react-hooks` | （airbnb 内部）检验 react-hooks 的使用方式 |
+| `eslint-config-prettier`    | 将会禁用掉所有那些非必须或者和 prettier 冲突的规则 |
 | `eslint-plugin-prettier`    | 辅助 Eslint 与 Prettier 一起协作，并将 Prettier 的解析作为 Eslint 的一部分 |
-| `husky`                     | git 命令 hook 专用配置，拦截 git 指令                                      |
-| `lint-staged`               | 定制在特定的 git 阶段执行特定的命令                                        |
+| `husky`                     | git 命令 hook 专用配置，拦截 git 指令 |
+| `lint-staged`               | 定制在特定的 git 阶段执行特定的命令 |
+| `babel-loader`        | webpack 中需要用到的 loader |
+| `style-loader`        | -- |
+| `css-loader`          | --| 
+| `webpack`             | 打包工具 webpack |
+| `webpack-cli`         | webpack cli 工具-- |
+| `webpack-dev-server`  | -- |
+| `html-webpack-plugin` | 自动生成打包后的 html 文件-- |
+| `webpack-merge`          | webpack-merge | 
+
+
+
 
 ---
 

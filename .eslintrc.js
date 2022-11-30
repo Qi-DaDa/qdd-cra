@@ -20,6 +20,16 @@ module.exports = {
     'react',
     'prettier', // eslint 会使用pretter的规则对代码格式化
   ],
+  settings: {
+    'import/resolver': {
+      // alias: {
+      //   map: ['@', './src'],
+      // },
+      // webpack: {
+      //   config: 'config/webpack.common.js', // 这是你设置alias的配置文件路径
+      // },
+    },
+  },
   // 自定义规则，可以覆盖掉extends的配置
   rules: {
     // lint
@@ -28,6 +38,8 @@ module.exports = {
     'react/react-in-jsx-scope': 0, // 验证 react来源
     'react/prop-types': 0, // 闭react默认的props-type验证
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }], // 可免去后缀
+    // import
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     // prettier
     'prettier/prettier': [
       2,
