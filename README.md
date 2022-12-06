@@ -10,9 +10,9 @@
 
 | 依赖| 说明|
 | :-------------------------- | :----------------------------- |
-| `@babel/core`         | 用于解析最新 ES 标准|
-| `@babel/preset-env`   | 根据预设的环境自动选用合适 babel 插件 |
-| `@babel/preset-react` | preset-react|
+| `@babel/core`| Babel 的核心模块，将其他 Babel 的核心代码封装到一块，用于和其他插件进行集成开发|
+| `@babel/preset-env` | 负责将 ES6 版本的代码转换为向后兼容的 JavaScript 语法 |
+| `@babel/preset-react` | 负责转换 React 的 JSX 代码，以及支持 React 的 API 的命名 |
 | `eslint`              | lint 代码的主要工具，所以的一切都是基于此包 |
 | `eslint-config-airbnb`| 提供了所有的 Airbnb 的 ESLint 配置 |
 | `eslint-plugin-react` | （airbnb 内部）React 专用的校验规则插件 |
@@ -24,16 +24,18 @@
 | `husky`                     | git 命令 hook 专用配置，拦截 git 指令 |
 | `lint-staged`               | 定制在特定的 git 阶段执行特定的命令 |
 | `babel-loader`        | webpack 中需要用到的 loader |
-| `style-loader`        | -- |
-| `css-loader`          | --| 
+| `file-loader` | 对项目中使用到的图片文件进行处理，将处理后的文件保存到 输出文件夹 |
+| `less`        | -- |
+| `less-loader`        | 编译 Less 为 CSS |
+| `style-loader`        | 从 JS 中创建样式节点 将css打包到style标签中 |
+| `css-loader`          | 转化 CSS 为 CommonJS | 
 | `webpack`             | 打包工具 webpack |
-| `webpack-cli`         | webpack cli 工具-- |
-| `webpack-dev-server`  | -- |
-| `html-webpack-plugin` | 自动生成打包后的 html 文件-- |
+| `webpack-cli`         | webpack cli 工具 |
+| `webpack-dev-server`  | 开启服务 |
+| `html-webpack-plugin` | 自动生成打包后的 html 文件 |
 | `webpack-merge`          | webpack-merge | 
-
-
-
+| `clean-webpack-plugin` | 启动服务时会清空build文件夹 |
+| `mini-css-extract-plugin` | css提取成一个独立的文件 当使用style-loader会把cs |
 
 ---
 
@@ -63,3 +65,12 @@
 
 - 安装`ESLint`扩展，即可对配置异常的代码进行提示；
 - 配置`settings.json `中`"editor.codeActionsOnSave": {"source.fixAll.eslint": true}` 则会根据规则自动修复
+
+**css**
+- `style-loader` 、`css-loader` 二者是配合使用把css打包在js中
+- `mini-css-extract-plugin`插件可以把css打包成独立的文件夹 ；与`style-loader`是存在冲突 二选一
+- `less`、`less-loader` 配合可以使用less预编译器
+
+**image**
+-  `file-loader` 对项目中的图片进行处理编译
+-  `url-loader` 可对图片进行优化（暂未添加）

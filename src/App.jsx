@@ -1,7 +1,8 @@
-import React from 'react';
-// import logoImg from './assets/images/a.jpg';
+import React from "react";
+import DemoPage from "./pages/demoPage";
+import "./index.css";
 
 function App() {
-  return <div style={{ background: 'aqua' }}>{/* <img src={logoImg} alt="" /> */}</div>;
+  return <DemoPage />;
 }
 export default App;

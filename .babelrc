@@ -1,3 +1,4 @@
+// babel的配置项，也可以在webpack中module.rule中配置
 {
   "presets": [
     [
@@ -13,12 +14,7 @@
     ["@babel/preset-react"]
   ],
   // 插件：插件在 Presets 前运行
-  "plugins": [
-    // 解决多个地方使用相同代码导致打包重复的问题
-    // [
-    //   "@babel/plugin-transform-runtime"
-    // ]
-  ],
+  "plugins": [],
   // 是否产生注释：webpack之中使用UglifyJsPlugin插件也是一样的效果
   "comments": false,
   // 是否压缩
