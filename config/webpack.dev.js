@@ -8,6 +8,7 @@ module.exports = merge(common, {
   devServer: {
     port: 9090,
     open: true,
+    hot: true, // 热更新
     proxy: {
       "/devApi": {
         target: "https://bilitest.huitun.com",

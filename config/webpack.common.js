@@ -1,8 +1,11 @@
 const path = require("path");
+const { DefinePlugin } = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const { NODE_ENV, SCRIPTS_TYPE, REACT_APP_A } = process.env;
+console.log("====>", NODE_ENV, SCRIPTS_TYPE, REACT_APP_A);
 // __dirname是node中的一个全局变量，它指向当前执行脚本所在的目录
 const ROOT_PATH = path.resolve(__dirname, "../"); // 获取根目录地址
 module.exports = {
@@ -12,11 +15,18 @@ module.exports = {
   output: {
     path: path.resolve(ROOT_PATH, "build"),
     filename: "js/[name]_[hash:5].js",
+    publicPath: "/",
   },
   resolve: {
     extensions: [".js", ".jsx"], // 自动补全后缀
     alias: {
       "@": path.resolve("src"), // 相对路径配置
+    },
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all", // 提取公共模块
+      name: "common",
     },
   },
   module: {
@@ -62,6 +72,14 @@ module.exports = {
     ],
   },
   plugins: [
+    // 将属性转化为全局变量，让代码中可以正常访问
+    new DefinePlugin({
+      "process.env": {
+        // NODE_ENV, // 添加mode后再环境中无法获取，默认在全局中获取
+        SCRIPTS_TYPE,
+        VERSION: "1.0.0",
+      },
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(ROOT_PATH, "public/index.html"),
       filename: "index.html",

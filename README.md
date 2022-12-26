@@ -33,9 +33,10 @@
 | `webpack-cli`         | webpack cli 工具 |
 | `webpack-dev-server`  | 开启服务 |
 | `html-webpack-plugin` | 自动生成打包后的 html 文件 |
-| `webpack-merge`          | webpack-merge | 
+| `webpack-merge`          | 在一个公用配置文件的基础下，添加额外配置 | 
 | `clean-webpack-plugin` | 启动服务时会清空build文件夹 |
 | `mini-css-extract-plugin` | css提取成一个独立的文件 当使用style-loader会把cs |
+| `cross-env` | 可以兼容多个系统设置环境变量 |
 
 ---
 
