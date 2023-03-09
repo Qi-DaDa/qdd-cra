@@ -26,7 +26,7 @@ module.exports = {
     "linebreak-style": 0,
     // react
     "react/react-in-jsx-scope": 0, // 验证 react来源
-    "react/prop-types": 0, // 闭react默认的props-type验证
+    "react/prop-types": 0, // react默认的props-type验证
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }], // 可免去后缀
     // import
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
